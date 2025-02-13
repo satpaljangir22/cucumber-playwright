@@ -5,6 +5,7 @@ const common = [
   "--require features/step_definitions/**/*.ts", // Load step definitions
   "--require features/support/playwright-environment.ts", // Load custom environment
   "--format progress-bar", // Load custom formatter
+  "--format json:reports/cucumber_report.json", // Generate JSON report
 ].join(" ");
 
 export default common;

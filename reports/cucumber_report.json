@@ -1,0 +1,79 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "form-submission;submit-a-form",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Submit a form",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 185367083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I navigate to the form submit demo page",
+            "match": {
+              "location": "features/step_definitions/steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 152873665
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I fill in the form with \"satpal\" and \"this is playwright test\"",
+            "match": {
+              "location": "features/step_definitions/steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1753311041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see a success message",
+            "match": {
+              "location": "features/step_definitions/steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32619584
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 16739040
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "form-submission",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Form submission",
+    "tags": [],
+    "uri": "features/example.feature"
+  }
+]
