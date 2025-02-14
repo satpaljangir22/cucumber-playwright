@@ -1,18 +1,11 @@
 import { Given, When, Then } from "@cucumber/cucumber";
-import { Browser, BrowserContext, expect, Page } from "@playwright/test";
 import { AjaxFormSubmit } from "../page-fixtures/ajax-form-submit";
-import { chromium } from "@playwright/test";
+import { pageFixture } from "../support/page-fixture";
 
-let page: Page;
-let browser: Browser;
-let context: BrowserContext;
 let ajaxFormSubmit: AjaxFormSubmit;
 
 Given("I navigate to the form submit demo page", async () => {
-  browser = await chromium.launch();
-  context = await browser.newContext();
-  page = await context.newPage();
-  ajaxFormSubmit = new AjaxFormSubmit(page);
+  ajaxFormSubmit = new AjaxFormSubmit(pageFixture.page);
 });
 
 When(
@@ -22,8 +15,4 @@ When(
   }
 );
 
-Then("I should see a success message", async () => {
-  await page.close();
-  await context.close();
-  await browser.close();
-});
+Then("I should see a success message", async () => {});
